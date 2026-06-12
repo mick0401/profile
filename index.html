@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mick's Portfolio | Crafting Experiences</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 💡 自定義字體 (選用 Google Fonts 的 Noto Sans TC，增加文青感) */
+        @import url('https://fonts.googleapis.com/css2?Noto+Sans+TC:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        /* 💡 滾動淡入動畫 (優化為更輕盈的向上浮起) */
+        @keyframes fadeInUpLite {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            view-timeline-name: --item;
+            view-timeline-axis: block;
+            animation-timeline: --item;
+            animation-name: fadeInUpLite;
+            animation-fill-mode: both;
+            /* 定義在畫面進入到 5% 到 30% 的位置時觸發動畫 */
+            animation-range: entry 5% cover 30%;
+        }
+
+        /* 自定義滾動條樣式，讓整體更精緻 */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #faf9f6;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e7e5e4;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ca8a04;
+        }
+    </style>
+</head>
+<body class="bg-[#faf9f6] text-slate-800 antialiased selection:bg-amber-100/80 tracking-wide font-light">
+
+    <header class="relative min-h-screen flex flex-col justify-center items-center px-6 text-center bg-[#faf9f6] overflow-hidden">
+        
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none">
+            <svg width="100%" height="100%" viewBox="0 0 100 100" reserveAspectRatio="none">
+                <path d="M0,50 C20,80 50,20 100,50 L100,100 L0,100 Z" fill="none" stroke="#ca8a04" stroke-width="0.1"/>
+                <line x1="10" y1="0" x2="90" y2="100" stroke="#ca8a04" stroke-width="0.05" />
+                <line x1="100" y1="20" x2="0" y2="80" stroke="#ca8a04" stroke-width="0.05" />
+            </svg>
+        </div>
+
+        <div class="relative mb-12 md:mb-16 group">
+    
+			<div class="absolute -inset-6 rounded-full border border-amber-100 opacity-60 group-hover:rotate-180 transition-transform duration-[5000ms] ease-linear"></div>
+    
+			<div class="absolute -inset-3.5 rounded-full border-2 border-amber-600/10 group-hover:scale-105 transition-transform duration-500 ease-out"></div>
+
+			<div class="relative w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden shadow-2xl shadow-amber-950/5 border-4 border-white transition-transform duration-500 ease-out group-hover:scale-105 group-hover:-rotate-3">
+				<img src="2.jpg" 
+				alt="Mick 的個人照" 
+				class="w-full h-full object-cover transform-gpu image-rendering-auto will-change-transform scale-[1.01] !object-top">
+			</div>
+		</div>
+
+        <h1 class="relative text-4xl md:text-6xl font-bold tracking-tight text-slate-950 mb-5 leading-tight">
+            嗨，我是 <span class="relative inline-block text-amber-600">
+                謝鳴起(Mick)
+                <span class="absolute -bottom-2 left-0 w-full h-1 bg-amber-200 rounded-full opacity-70"></span>
+            </span>
+        </h1>
+        
+        <p class="relative text-base md:text-lg text-slate-600 max-w-lg leading-relaxed px-4 font-light">
+            喜歡用最懂人心的言語，理解複雜的專業理論。<br>
+			以下是我的個人故事經歷：
+        </p>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-slate-400 text-xs tracking-widest flex flex-col items-center gap-2 font-mono">
+            <span>EXPLORE</span>
+            <span class="text-lg">↓</span>
+        </div>
+
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-16 md:py-24 bg-[#faf9f6]">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 md:gap-y-32">
+            
+            <section class="animate-on-scroll flex flex-col group">
+                <div class="overflow-hidden rounded-2xl bg-stone-100 aspect-[4/3] shadow-md transition-shadow duration-500 group-hover:shadow-xl group-hover:shadow-amber-950/5">
+                    <img src="3.jpg" alt="專案經歷1" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                </div>
+                <div class="mt-7 px-1">
+                    <span class="text-xs font-semibold tracking-wider text-amber-600 uppercase font-mono">01 / 團體演講</span>
+                    <h3 class="text-xl font-bold text-slate-950 mt-2.5 mb-3.5 tracking-tight">機構中心教育推廣</h3>
+                    
+                    <div class="flex flex-wrap gap-2 mb-5">
+                        <span class="text-xs bg-stone-100 text-stone-600 px-3 py-1.5 rounded font-medium">#課程結構設計</span>
+                        <span class="text-xs bg-stone-100 text-stone-600 px-3 py-1.5 rounded font-medium">#口語表達互動</span>
+                        <span class="text-xs bg-stone-100 text-stone-600 px-3 py-1.5 rounded font-medium">#文案企劃實力</span>
+                    </div>
+
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base font-light">
+                        拋開生硬的理論、換上你日常會發生的故事，當聽眾認同、開始點頭微笑，是最好不過的回饋！
+                    </p>
+                </div>
+            </section>
+
+            <section class="animate-on-scroll flex flex-col group md:mt-16">
+                <div class="overflow-hidden rounded-2xl bg-stone-100 aspect-[4/3] shadow-md transition-shadow duration-500 group-hover:shadow-xl group-hover:shadow-amber-950/5">
+                    <img src="4.jpg" alt="專案經歷2" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                </div>
+                <div class="mt-7 px-1">
+                    <span class="text-xs font-semibold tracking-wider text-amber-600 uppercase font-mono">02 / 策展規劃</span>
+                    <h3 class="text-xl font-bold text-slate-950 mt-2.5 mb-3.5 tracking-tight">2025 高雄食品展覽會</h3>
+                    
+                    <div class="flex flex-wrap gap-2 mb-5">
+                        <span class="text-xs bg-stone-100 text-stone-600 px-3 py-1.5 rounded font-medium">#產覽行銷活動</span>
+                        <span class="text-xs bg-stone-100 text-stone-600 px-3 py-1.5 rounded font-medium">#空間動線設計</span>
+                        <span class="text-xs bg-stone-100 text-stone-600 px-3 py-1.5 rounded font-medium">#觀展效益評估</span>
+                    </div>
+
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base font-light">
+                        第一次帶自己的產品參加展覽，從無到有一步步跨領域溝通、規劃，累積社群粉絲+180%。
+                    </p>
+                </div>
+            </section>
+
+            <section class="animate-on-scroll flex flex-col group">
+                <div class="overflow-hidden rounded-2xl bg-stone-100 aspect-[4/3] shadow-md transition-shadow duration-500 group-hover:shadow-xl group-hover:shadow-amber-950/5">
+                    <img src="5.jpg" alt="專案經歷3" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                </div>
+                <div class="mt-7 px-1">
+                    <span class="text-xs font-semibold tracking-wider text-amber-600 uppercase font-mono">03 / 商業合作</span>
+                    <h3 class="text-xl font-bold text-slate-950 mt-2.5 mb-3.5 tracking-tight">巧食丨異業合作洽談</h3>
+                    
+                    <div class="flex flex-wrap gap-2 mb-5">
+                        <span class="text-xs bg-stone-100 text-stone-600 px-3 py-1.5 rounded font-medium">#商業模式分析</span>
+                        <span class="text-xs bg-stone-100 text-stone-600 px-3 py-1.5 rounded font-medium">#企劃提案技巧</span>
+                        <span class="text-xs bg-stone-100 text-stone-600 px-3 py-1.5 rounded font-medium">#商務人脈托展</span>
+                    </div>
+
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base font-light">
+                        透過不斷洽詢異業合作，讓產品服務觸及不領域受眾，發揮品牌最大價值。
+                    </p>
+                </div>
+            </section>
+
+            <section class="animate-on-scroll flex flex-col group md:mt-16">
+                <div class="overflow-hidden rounded-2xl bg-stone-100 aspect-[4/3] shadow-md transition-shadow duration-500 group-hover:shadow-xl group-hover:shadow-amber-950/5">
+                    <img src="7.jpg" alt="專案經歷4" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                </div>
+                <div class="mt-7 px-1">
+                    <span class="text-xs font-semibold tracking-wider text-amber-600 uppercase font-mono">04 / 資訊專業</span>
+                    <h3 class="text-xl font-bold text-slate-950 mt-2.5 mb-3.5 tracking-tight">工研院受訓數據分析報告</h3>
+                    
+                    <div class="flex flex-wrap gap-2 mb-5">
+                        <span class="text-xs bg-stone-100 text-stone-600 px-3 py-1.5 rounded font-medium">#程式語言基礎</span>
+                        <span class="text-xs bg-stone-100 text-stone-600 px-3 py-1.5 rounded font-medium">#大數據清洗整理</span>
+                        <span class="text-xs bg-stone-100 text-stone-600 px-3 py-1.5 rounded font-medium">#銷售市場洞察</span>
+                    </div>
+
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base font-light">
+                        結合Vibe Coding與AI大數據，用理性數據指標，拆解感性的音樂專輯詞頻與曲風變化。
+                    </p>
+                </div>
+            </section>
+
+            <section class="animate-on-scroll flex flex-col group">
+                <div class="overflow-hidden rounded-2xl bg-stone-100 aspect-[4/3] shadow-md transition-shadow duration-500 group-hover:shadow-xl group-hover:shadow-amber-950/5">
+                    <img src="8.jpg" alt="專案經歷5" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                </div>
+                <div class="mt-7 px-1">
+                    <span class="text-xs font-semibold tracking-wider text-amber-600 uppercase font-mono">05 / 團隊協作</span>
+                    <h3 class="text-xl font-bold text-slate-950 mt-2.5 mb-3.5 tracking-tight">商品攝影及腳本規劃</h3>
+                    
+                    <div class="flex flex-wrap gap-2 mb-5">
+                        <span class="text-xs bg-stone-100 text-stone-600 px-3 py-1.5 rounded font-medium">#視覺風格定調</span>
+                        <span class="text-xs bg-stone-100 text-stone-600 px-3 py-1.5 rounded font-medium">#分鏡腳本規劃</span>
+                        <span class="text-xs bg-stone-100 text-stone-600 px-3 py-1.5 rounded font-medium">#社群平台配置</span>
+                    </div>
+
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base font-light">
+                        扮演產品、行銷與攝影間的溝通橋樑，良好的協作溝通，能凝聚團隊把專案做到極致。
+                    </p>
+                </div>
+            </section>
+
+            <section class="animate-on-scroll flex flex-col group md:mt-16">
+                <div class="overflow-hidden rounded-2xl bg-stone-100 aspect-[4/3] shadow-md transition-shadow duration-500 group-hover:shadow-xl group-hover:shadow-amber-950/5">
+                    <img src="6.jpg" alt="專案經歷6" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                </div>
+                <div class="mt-7 px-1">
+                    <span class="text-xs font-semibold tracking-wider text-amber-600 uppercase font-mono">06 / 個人特質</span>
+                    <h3 class="text-xl font-bold text-slate-950 mt-2.5 mb-3.5 tracking-tight">保持好奇體驗生活</h3>
+                    
+                    <div class="flex flex-wrap gap-2 mb-5">
+                        <span class="text-xs bg-stone-100 text-stone-600 px-3 py-1.5 rounded font-medium">#生理數據追蹤</span>
+                        <span class="text-xs bg-stone-100 text-stone-600 px-3 py-1.5 rounded font-medium">#持續學習</span>
+                        <span class="text-xs bg-stone-100 text-stone-600 px-3 py-1.5 rounded font-medium">#生活美學</span>
+                    </div>
+
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base font-light">
+                        工作之外的時間，喜歡於探索新事物，保持對事物的好奇心，是我持續成長的動力！
+                    </p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-stone-100 py-16 md:py-20 text-center px-6">
+		<h2 class="text-2xl md:text-3xl font-bold text-slate-950 mb-4 tracking-tight">期待與您交流</h2>
+		<p class="text-slate-500 text-sm md:text-base mb-2 max-w-sm mx-auto font-light">無論是技術交流或分享，都歡迎與我聯繫😄</p>
+    
+		<p class="text-amber-600 font-mono text-sm mb-8 tracking-wider">信箱：mick850401@gmail.com</p>
+    
+		<a href="https://mail.google.com/mail/?view=cm&fs=1&to=mick850401@gmail.com" 
+       target="_blank" 
+       class="inline-block bg-slate-950 text-white px-8 py-3.5 rounded-full font-medium shadow-lg hover:bg-slate-800 transition-colors w-full sm:w-auto sm:min-w-[200px]">
+        發送郵件給我
+		</a>
+	</footer>
+
+</body>
+</html>
